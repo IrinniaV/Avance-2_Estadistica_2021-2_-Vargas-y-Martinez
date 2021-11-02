@@ -1,0 +1,1034 @@
+---
+title: "Entrega 2 del Trabajo de Estadística para el Análisis Político II"
+author: "Jhoselyn Enith Martinez Urday e Irinnia Del Carmen Vargas Velasquez"
+date: "31/10/2021"
+output:
+  html_document:
+    theme: readable
+    highlight: tango
+---
+--- 
+- **Tema de investigación**:
+
+Factores que explican la violencia física y psicológica contra los niños y niñas en ell contexto familiar y escolar en el Perú
+
+- **Pregunta de investigación**:
+
+¿Cuáles son los factores que permiten explicar la violencia física y psicológica ejercida contra los niños y niñas de 9 a 11 años en el Perú?
+
+- **Objetivos del trabajo**:
+
+    **Objetivo General**: Determinar los factores que explican la violencia física y psicológica ejercida contra los niños y niñas de 9 a 11 años en el Perú
+    
+    **Objetivos específicos**:
+    
+      1. Establecer los factores específicos que permiten explicar tanto la violencia física como psicológica ejercida en los hogares contra los niños y niñas de 9 a 11 años en el Perú
+      2. Establecer los factores específicos que permiten explicar tanto la violencia física como psicológica ejercida en las instituciones educativas contra los niños y niñas de 9 a 11 años en el Perú
+      
+- **Hipótesis**:
+
+    1. El lugar de residencia, la constitución de la familia, la edad, la condición socioeconómica y el género son los factores más relevantes que permiten explicar un alto nivel de violencia física ejercida contra los niños y niñas en sus hogares
+    2. El lugar de residencia, la edad, el género, la constitución de la familia, el rendimiento académico y la condición socioeconómica son los factores más relevantes que permiten explicar un alto nivel de violencia psicológica ejercida contra los niños y niñas en sus hogares
+    3. El género, el lugar de residencia, el rendimiento académico y la condición socioeconómica son los factores más relevantes que permiten explicar un alto nivel de violencia física ejercida contra los niños y niñas en la escuela
+    4. El lugar de residencia, el género, el rendimiento académico y la condición socioeconómica son los factores más relevantes que permiten explicar un alto nivel de violencia psicológica ejercida contra los niños y niñas en la escuela
+    
+- **Problema Público**:
+
+Alto índice de violencia física y psicológica ejercida contra niños y niñas de 9 a 11 años en el Perú durante el año 2019
+
+- **Contextualización del problema público**:
+
+Según el Observatorio Nacional de la Violencia contra las mujeres y los integrantes del grupo familiar, el “73.8% de niños y niñas de 9 a 11 años de edad, alguna vez en su vida fueron víctimas de violencia psicológica o física por parte de las personas con las que viven” (2018). Mientras que, en el entorno escolar, se determinó que el 75% de niños y niñas se vio afectado por la violencia ejercida entre pares dentro de los ambientes de la institución educativa a la que asisten (Observatorio Nacional de la Violencia contra las mujeres y los integrantes del grupo familiar, 2018). Las cifras presentadas dan cuenta de una realidad dolorosa y recurrente en el Perú, en la cual los niños y niñas padecen de violencia física y psicológica no solo en sus hogares, sino también en espacios educativos como la escuela. Cabe destacar que, la violencia contra los infantes es un grave problema nacional, el cual ha sido normalizado por décadas como parte del “método de corrección” que permite a los padres castigar a sus hijos según crean adecuado. En tal sentido, la violencia física y psicológica contra los menores de edad “(...) es considerada una práctica válida para corregir, controlar o mostrar poder sobre los niños, niñas y adolescentes” (UNICEF, 2019), los cuales solo tienden a soportar y callar los abusos a los que fueron sometidos.
+No obstante, según la Defensoría del Pueblo, la situación de vulnerabilidad que experimentan los infantes respecto a la violencia exige una especial protección por parte del Estado, la familia y la comunidad (s.f), ya que los niños, niñas y adolescentes cuentan con derechos plenos plasmados en la Convención sobre los Derechos del Niño que deben ser plenamente respetados por cualquier individuo, ya sea un familiar o una persona con autoridad. Es importante resaltar la grave situación actual de los casos de violencia contra los infantes, lo cual se evidencia en los 12,014 casos reportados a nivel nacional por los Centros de Emergencia Mujer respecto a la violencia hacia los niños, niñas y adolescentes (MIMP, 2020). Durante la pandemia, los reportes del Ministerio de la Mujer y Poblaciones Vulnerables dan cuenta del incremento del número de denuncias realizadas respecto a episodios de violencia contra niños, niñas y adolescentes, el número asciende a los 9800 casos a nivel nacional solo durante el 2021 (Perú21, 2021).
+A raíz de ello, el presente trabajo se enfocará en analizar y determinar los factores que permiten explicar el problema público referido al alto índice de violencia tanto física como psicológica ejercida contra los niños y niñas de 9 a 11 años en los espacios del hogar y la escuela en el año 2019 en el Perú. Se debe mencionar que, se seleccionó al grupo de infantes de 9 a 11 años, ya que nuestra área de interés es el grupo de niños y niñas pertenecientes a la etapa de la infancia escolar antes de su pase a la adolescencia. Asimismo, se eligió el año 2019, ya que se emplea la base de datos ENAHO, la cual tan solo ha sido actualizada hasta ese año. Cabe resaltar que este problema público ingresó a la agenda política en el año 2015 mediante la promulgación de la Ley N° 30403 que “(...) prohíbe el castigo físico y humillante para niños, niñas y adolescentes y establece la prohibición a que padres, madres o cualquier persona a cargo de menores de edad del hogar, la escuela (...) utilicen el castigo físico y humillante contra ellos” (El Peruano, s.f). Ello significó una acción concreta por parte del Estado para atender la grave situación de la violencia ejercida contra los niños y niñas tanto en el hogar como en la escuela.
+
+###### **Políticas públicas, marco regulatorio y acción del Estado**
+
+Como parte de un marco regulatorio establecido por el Estado peruano para velar por la integridad y bienestar de los niños, niñas y adolescentes se pueden identificar las siguientes leyes y decretos:
+
+    - La Ley del Sistema Nacional de Atención Integral al Niño y el Adolescente (Ley N° 26518) que tiene como fin orientar, integrar, estructurar, coordinar, monitorear y evaluar las políticas, planes y programas a nivel nacional que están destinados a la atención integral de niños y adolescentes. Es importante mencionar que se entiende por atención integral como el conjunto de acciones dirigidas al desarrollo de los niños, niñas y adolescentes en los aspectos físicos, éticos y morales y otras dimensiones de su vida con el objetivo de lograr su incorporación plena a la sociedad y su éxito personal.  
+    - La Ley Nº 27337 que aprueba el Nuevo Código de los Niños y Adolescentes en el año 2000. Este código se enmarca en los derechos civiles, económicos, sociales y culturales de los niños y adolescentes, con el objetivo de establecer un marco legal que da sustento a diversas normas e intervenciones públicas en temas de atención integral, salud, educación, protección, identidad y justicia. 
+    - La Ley N° 30364 para prevenir, sancionar y erradir la violencia contra las mujeres y los integrantes del grupo familiar, en especial aquellos que se encuentran en situación de vulnerabilidad como las niñas, niños, asolescentes, personas adultas mayores y personas con discaoacidad. En ese sentido, para el cumplimiento de este fin establece mecanismos y políticas integrales de prevención, atención y protección de las víctimas como la persecución y sanción de los agresores. 
+    - La Ley N°30403 que prohíbe el uso del castigo físico y humillante contra los niños, niñas, y adolescentes en el hogar, la escuela, la comunidad, lugares de trabajo y otros relacionados; con la finalidad de lograr un desarrollo integral en un ambiente de protección sin violencia, en los diferentes ámbitos en los que transcurren sus vidas. Así, su objetivo principal es contribuir con prácticas positivas de crianza que no impliquen violencia y tratos humillantes. 
+    - El Decreto Supremo N°004-2018-MINEDU que aprueba los Lineamientos para la Gestión de la convivencia escolar, la prevención y la tensión de la violencia contra las niñas, niños y adolescentes. 
+    - El decreto Supremo N° 009-2019-MC que aprueba los lineamientos para incorporar el enfoque intercultural en la prevención, atención y protección frente a la violencia sexual contra niños, niñas, adolescentes y mujeres indígenas u originarias con la finalidad de contribuir al acceso de servicios públicos de prevención, atención y protección en un marco reconocmiento de la diversidad cultural.
+
+Ahora bien, en cuanto a políticas públicas se destaca la formulación del Plan Nacional de Acción por la Infancia y la Adolescencia (PNAIA) que se enmarca en el periodo 2012-2021 teniendo como ejes la igualdad de oportunidades, el acceso a servicios de calidad y el ejercicio y defensa de los derechos fundamentales que permita a este conjunto de la población un desarrollo pleno. En ese sentido, se propone una serie de metas como las siguientes:reducir la desnutrición infantil, garantizar el acceso a una educación inicial de calidad, el logro de un nivel suficiente de comprensión lectora y razonamiento matemático así como la reducción de la maternidad adolescente y la disminución de la violencia familiar contra niñas, niños y adolescentes.  
+Además, resulta importante mencionar que cuentan con una comisión multisectorial que se encarga de la implementación del PNAIA, la cual está formada por representantes de doce Ministerios y seis instituciones públicas y se reúnen periódicamente con el objetivo de coordinar, monitorear y evaluar el cumplimiento de los objetivos, metas y estrategias planteadas en el PNAIA. 
+Es importante mencionar que con la finalidad de actualizar el PNAIA, el presente año 2021 se dio paso a la conformación de un Grupo de trabajo Multisectorial de carácter temporal y dependiente del MIMP, con lo cual el se elaboró la Política Nacional Multisectorial para las Niñas, Niños y Adolescentes  al 2030 aprobada con el Decreto Supremo N° 008-2021. De ese modo, esta Política Nacional constituye un marco para las políticas públicas en temas de niñez y adolescencia que guiará la acción del Estado en los tres niveles de gobierno para el desarrollo de  intervenciones articuladas. En ese sentido, plantea el siguiente la siguiente situación deseada: “Al año 2030, las niñas, niños y adolescentes ejercen sus derechos, logrando su bienestar físico, mental y social, acceden oportunamente a servicios de calidad en igualdad de oportunidades y sin discriminación, tienen condiciones para una vida saludable, alcanzan todo su potencial de desarrollo, ampliando sus oportunidades”.
+Consta de 5 objetivos entre los cuales el tercero (OP3)  está orientado a disminuir el riesgo de  desprotección de las niñas, niños y adolescentes para lo cual el segundo lineamiento busca mejorar la capacidad de identificación, prevención y denuncia de las diferentes formas de violencia, en las niñas, niños y adolescentes. Además, en el limiento 4 se contempla “Incrementar el acceso oportuno a servicios orientados a la atención, recuperación y reintegración de niñas, niños y adolescentes víctimas de violencia, trata y explotación sexual.”
+
+###### **Factores asociados al problema de interés**
+
+Tras una revisión de la literatura, se ha encontrado que el abordaje de la violencia física y psicológica en niños, niñas y adolescentes es de carácter multicausal, lo que implica un análisis en los diferentes niveles de interacción de la vida como la familia, la comunidad y la escuela, por ejemplo (Gonzáles-Muriel, 1998; Benavides y León, 2013; y Sánchez e Hidalgo, 2019). En ese sentido, en el presente trabajo de investigación se analizarán los factores asociados a la violencia tanto física como psicológica en el hogar y la escuela e identificando como se relacionan ambos espacios. 
+Sánchez e Hidalgo (2019) tras analizar la evidencia recogida en el estudio longitudinal de Niños del Milenio sostienen que estos factores asociados a haber sido víctima de violencia alguna vez a los 15 años son las características individuales como la edad y el sexo; las características del hogar y de los padres, así como también el área o lugar de residencia. Además, señalan que el rol de los factores que pueden cambiar con el paso del tiempo como son la migración, cambios en cuanto al nivel socioeconómico y en la estructura familiar. Ante esto, es importante mencionar que el rol que desempeñan estos factores varían según la edad que tienen las y los jóvenes. 
+Entre otros hallazgos resalta, por ejemplo, que las mujeres tienen mayor probabilidad de ser víctimas de violencia en el entorno familiar y de pareja.Además, que la migración por búsqueda de mejores oportunidades  Asimismo, las mejoras relativas en el nivel socioeconómico se asocian con un incremento de la violencia física en el entorno familiar, pero constituye un factor protector frente a la violencia psicológica en el entorno comunitario. Con respecto a los padres y en especial en la madre, encontraron que la salud mental de ésta en tanto padezca de depresión, ansiedad y/o haya sido víctima de violencia física por parte de su pareja se asocia con un aumento en la violencia psicológica a los hijos e hijas.  Finalmente, señalan que es más probable que este la violencia psicol´gica se presenta en familias con antecedentes de violencia doméstica o con actitudes positivas hacia el castigo como forma de corrección del comportamiento. 
+Por su parte, Benavides y León (2013) tres tipos de factores asociados.  En primer lugar, los factores inmediatos  son aquellos que influyen en la ocurrencia de la violencia infantil y tienen que ver con las características demográficas como la edad y  el género, siendo las niñas más vulnerables a ser víctimas de violencia psicológica y sexual, mientras que los niños lo serían a la violencia física. Adicionalmente las características físicas en tanto un niño o niño tenga algún tipo de discapacidad también constituye una variable inmediata de riesgo. En segundo lugar, entre los factores familiares identifican al bajo nivel de ingresos económicos, el bajo nivel educativo de los padres, el desempleo, la edad de los padres y su lengua materna, así como la alta tasa de hacinamiento y el número de hijos en el hogar constituyen factores de riesgo para que ocurra violencia infantil. Adicionalmente, la perspectiva de los padres acerca del uso de la violencia resulta fundamental en tanto la consideren o no como una medida legítima para castigar a sus hijos e hijas. En esa línea, Oré y Diez Canseco (2011) al analizar la relación entre violencia infantil y  disciplina encontraron que los padres no consideran el castigo físico como algo negativo y violento, sino como una forma de corregir comportamientos de los niños, niñas y adolescentes. En tercer lugar, los factores contextuales hacen referencia al impacto que tiene la comunidad en la que residen los niños, niñas y adolescentes, en tanto puede ser un espacio donde se ejerza o se sufra violencia (Benavides y León, 2013) . Así, sostiene que las regiones o comunidades con mayores índices de pobreza, desempleo y bajos niveles educativos constituyen un factor de riesgo importante. 
+En cuanto a la violencia en el entorno escolar, la cual se conceptualiza como bullying o acoso escolar y se caracteriza por un desequilibrio de poder o fuerza en tanto se ejerce contra la persona más “débil”. Además, se trata de un comportamiento agresivo con el fin de hacer daño de manera intencional y, por último, este daño causado se repite durante el tiempo inclusive fuera del horario escolar (Olweus, 2017).   
+Ahora bien, García (2018) propone tres niveles en los que identifica factores asociados a ser víctima de bullying escolar en la niñez. En primer lugar, a nivel individual se encuentran los antecedentes personales como pueden ser algún tipo de enfermedad mental, actitudes diferenciales entre niños y niñas que se relacionan con la inteligencia emocional y con el éxito o fracaso en la escuela. En segundo lugar, a nivel familiar, el autor identifica algunos factores asociados con que los niños y niñas ejerzan violencia contra otros niños en la escuela. Entre ellos se encuentran familias desestructuradas, padres con problemas de adicción, en situación de pobreza, peleas constantes de pareja y con un bajo nivel educativo. Adicionalmente, se encuentran las familias alejadas socio- estructuralmente; es decir, con un bajo nivel socioeconómico en la organización escolar y sus objetivos, lo que puede provocar falta de motivación en los hijos e hijas. En tercer lugar, a nivel escolar se encuentran los siguientes factores: la minimización de la gravedad de la violencia escolar porque se considera inevitables; respuesta ineficiente ante casos de bullying, lo que implica dejar a las víctimas sin ayuda; y el papel del profesorado que no se involucra en las necesidades de sus estudiantes. 
+Finalmente, entre otros hallazgos García (2018) ha encontrado que en particular las situaciones de bullying físico suelen ocurrir en lugares en los que no hay supervisión. Además, los alumnos varones en comparación con las alumnas, son los que más participación tienen como agresores o bullies. De igual manera, Olweus (2014) sostiene que el acoso físico es más habitual entre los hombres, mientras que las mujeres recurren a formas más sutiles como la difamación, correr rumores y la manipulación en las relaciones amicales.Sin embargo, como menciona Sánchez e Hidalgo (2019) a medida que los estudiantes van creciendo las tasas de bullying disminuyen.
+
+---
+
+```{r include=FALSE}
+setwd("~/Jhoselyn/2021/PUCP/2021-2/Estadística para el Análisis Político 2/R Studio/Trabajo Grupal/Entrega 2")
+```
+
+```{r include=FALSE}
+library(rio)
+library(dplyr)
+library(psych)
+library(rio)
+library(tidyverse)
+library(RColorBrewer)
+```
+
+```{r include=FALSE}
+### Abrir bases de datos
+C100<-import("16_CRS03_CAP100.sav")
+C200<-import("17_CRS03_CAP200.sav")
+```
+
+> **Explorar base de datos**
+
+```{r}
+str(C100)
+```
+
+```{r}
+str(C200)
+```
+
+```{r}
+names(C100)
+```
+
+```{r}
+names(C200)
+```
+
+#####  **Seleccionar variables de las bases de datos**
+```{r}
+C100 = C100 %>% select(-CCDD, -CCPP, -USUARIO_ID, -CODCCPP, -CCDI, -AREA, -COD_MOD, -TIEDBA, -RFINAL, -COLEGIAL_ID, -TURNO_N, -C3SECC, -C3P103EDAD, -C3P104, -C3P102_MES, -C3P102_ANIO, -C3P119_1, -C3P119_2, -C3P119_3, -C3P119_4, -C3P119_5, -C3P119_6, -C3P119_7, -C3P119_8, -C3P119_9, -C3P119_10, -C3P119_11, -C3P119_12, -C3P118_1, -C3P118_2, -C3P118_3, -C3P118_4, -C3P118_5, -C3P118_6, -C3P118_7, -C3P118_8, -C3P118_9, -C3P118_10, -C3P118_11, -C3P118_12, -C3P120F, -C3P120G, -C3P120H_1, -C3P120H_2, -C3P120H_3, -C3P120H_4, -C3P120H_5, -C3P120H_6, -C3P120H_7, -RESULTFINENTREV, -FACTOR_ALUMNOS)
+```
+
+```{r}
+C200 = C200 %>% select(-CCDD, -CCPP, -USUARIO_ID, -CODCCPP, -CCDI, -AREA, -COD_MOD, -TIEDBA, -RFINAL, -COLEGIAL_ID, -TURNO_N, -C3SECC, -C3P201_11, -C3P201A_11, -C3P201B_11, -C3P205_7, -C3P205A_7, -C3P205B_7, -C3P216A_3, -C3P216A_3C, -C3P216A_5, -C3P216A_5C, -C3P216A_6, -C3P216A_6C, -C3P216C_1, -C3P216C_1C, -C3P216C_2, -C3P216C_2C, -C3P216C_3, -C3P216C_3C, -C3P216C_4, -C3P216C_4C, -C3P216C_5, -C3P216C_5C, -C3P221, -C3P223_14, -C3P223A_14, -C3P223B_14, -C3P223C_14, -C3P223D_14, - C3P227_10, -C3P227A_10, -C3P227B_10, -C3P227C_10, -C3P227D_10, -RESULTFINENTREV, -FACTOR_ALUMNOS)
+```
+
+##### **Combinar bases de datos**
+```{r}
+enares_2019 = C100 %>% left_join(C200)
+```
+
+```{r}
+### Explorar base de datos a usar en el reporte
+str(enares_2019)
+```
+--- 
+
+> **Configuración de variables**
+
+- **Variable: Sexo**
+```{r echo=FALSE}
+### Variable:Sexo
+library(car)
+str(enares_2019$SEXO)
+enares_2019$SEXO <- car::recode(enares_2019$SEXO, "1='Mujer'; 2 ='Hombre'")
+class(enares_2019$SEXO)
+table(enares_2019$SEXO)
+```
+
+- **Variable: Turno_Mañana**
+```{r echo=FALSE}
+### Variable: Turno_Mañana
+str(enares_2019$TURNO_M)
+table(enares_2019$TURNO_M)
+enares_2019$TURNO_M <- car::recode(enares_2019$TURNO_M, "1='Turno_Mañana'; 0='No_Mañana'")
+table(enares_2019$TURNO_M)
+```
+
+- **Variable: Turno_Tarde**
+```{r echo=FALSE}
+### Variable: Turno_Tarde
+str(enares_2019$TURNO_T)
+table(enares_2019$TURNO_T)
+enares_2019$TURNO_T <- car::recode(enares_2019$TURNO_T, "1='Turno_Tarde'; 0='No_Tarde'")
+table(enares_2019$TURNO_T)
+```
+
+- **Variable: Total de varones y mujeres**
+```{r}
+str(enares_2019$TOTAL_V)
+str(enares_2019$TOTAL_M)
+```
+
+- **Variable: Tipo de vivienda**
+```{r echo=FALSE}
+str(enares_2019$C3P105)
+table(enares_2019$C3P105)
+enares_2019$C3P105=as.factor(enares_2019$C3P105)
+enares_2019$C3P105<- car::recode(enares_2019$C3P105, "1='Casa'; 2='Albergue'")
+enares_2019=enares_2019%>%rename(Vivienda=C3P105)
+table(enares_2019$Vivienda)
+```
+
+```{r}
+### Variable: Niño y/o niña considera que la agresión se debe al hecho de tener plata
+str(enares_2019$C3P232_3)
+table(enares_2019$C3P232_3)
+enares_2019$C3P232_3<- car::recode(enares_2019$C3P232_3, "1='Tiene Plata'; 0='No Plata'")
+enares_2019=enares_2019%>%rename(Tiene_Plata=C3P232_3)
+table(enares_2019$Tiene_Plata)
+```
+```{r}
+#### Variable: Niño y/o niña considera que la agresión se debe al hecho de no tener plata
+str(enares_2019$C3P232_4)
+table(enares_2019$C3P232_4)
+enares_2019$C3P232_4<- car::recode(enares_2019$C3P232_4, "1='No Plata'; 0='Tiene plata'")
+enares_2019=enares_2019%>%rename(No_Tiene_Plata=C3P232_4)
+table(enares_2019$No_Tiene_Plata)
+```
+
+```{r}
+### Variable: Niño y/o niña considera que la agresión se debe al hecho de sacar buenas notas
+str(enares_2019$C3P232_6)
+table(enares_2019$C3P232_6)
+enares_2019$C3P232_6<- car::recode(enares_2019$C3P232_6, "1='Buenas Notas'; 0='No Buenas Notas'")
+enares_2019=enares_2019%>%rename(Buenas_Notas=C3P232_6)
+table(enares_2019$Buenas_Notas)
+```
+
+```{r}
+### Variable: Niño y/o niña considera que la agresión se debe al hecho de sacar malas notas
+str(enares_2019$C3P232_7)
+table(enares_2019$C3P232_7)
+enares_2019$C3P232_7<- car::recode(enares_2019$C3P232_7, "1='Malas Notas'; 0='No Malas Notas'")
+enares_2019=enares_2019%>%rename(Malas_Notas=C3P232_7)
+table(enares_2019$Malas_Notas)
+```
+
+```{r}
+### Variable: Violencia psicolígica en el hogar, ¿CON QUÉ FRECUENCIA TE HAN OCURRIDO ESTAS SITUACIONES?
+str(enares_2019$C3P204)
+table(enares_2019$C3P204)
+enares_2019$C3P204<- car::recode(enares_2019$C3P204, "1='Rara Vez'; 2='Algunas Veces'; 3='Siempre/Casi Siempre'; 4=NA")
+enares_2019$C3P204=as.ordered(enares_2019$C3P204)
+class(enares_2019$C3P204)
+table(enares_2019$C3P204)
+```
+
+```{r}
+### Variable: Violencia física en el hogar, ¿CON QUÉ FRECUENCIA TE HAN OCURRIDO ESTAS SITUACIONES?
+str(enares_2019$C3P208)
+table(enares_2019$C3P208)
+enares_2019$C3P208<- car::recode(enares_2019$C3P208, "1='Rara Vez'; 2='Algunas Veces'; 3='Siempre/Casi Siempre'; 4=NA")
+enares_2019$C3P208=as.ordered(enares_2019$C3P208)
+class(enares_2019$C3P208)
+table(enares_2019$C3P208)
+```
+
+```{r}
+### Variable: Violencia psicológica en la escuela, ¿CON QUÉ FRECUENCIA TE HAN OCURRIDO ESTAS SITUACIONES?
+str(enares_2019$C3P226)
+table(enares_2019$C3P226)
+enares_2019$C3P226<- car::recode(enares_2019$C3P226, "1='Rara Vez'; 2='Algunas Veces'; 3='Siempre/Casi Siempre'; 4=NA")
+enares_2019$C3P226=as.ordered(enares_2019$C3P226)
+class(enares_2019$C3P226)
+table(enares_2019$C3P226)
+```
+
+```{r}
+### Variable: Violencia física en la escuela, ¿CON QUÉ FRECUENCIA TE HAN OCURRIDO ESTAS SITUACIONES?
+str(enares_2019$C3P230)
+table(enares_2019$C3P230)
+enares_2019$C3P230<- car::recode(enares_2019$C3P230, "1='Rara Vez'; 2='Algunas Veces'; 3='Siempre/Casi Siempre'; 4=NA")
+enares_2019$C3P230=as.ordered(enares_2019$C3P230)
+class(enares_2019$C3P230)
+table(enares_2019$C3P230)
+```
+
+```{r}
+### Variable: EN TU CASA, INCLUYÉNDOTE ¿CUÁNTAS PERSONAS VIVEN CONTIGO?
+str(enares_2019$C3P114_PERS)
+enares_2019$C3P114_PERS=as.numeric(enares_2019$C3P114_PERS)
+class(enares_2019$C3P114_PERS)
+```
+
+
+#### **Creación del índice de la variable de violencia física en el entorno familiar**
+
+```{r include=FALSE}
+### Variable: EN TU CASA ¿TE DEJAN O TE HAN DEJADO SIN COMER POR MÁS DE UN DÍA?
+str(enares_2019$C3P121)
+table(enares_2019$C3P121)
+enares_2019$C3P121<- car::recode(enares_2019$C3P121, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P121)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te jalan o te han jalado el cabello u orejas?
+str(enares_2019$C3P205_1)
+table(enares_2019$C3P205_1)
+enares_2019$C3P205_1<- car::recode(enares_2019$C3P205_1, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P205_1)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dan o te han dado cachetadas o nalgadas?
+str(enares_2019$C3P205_2)
+table(enares_2019$C3P205_2)
+enares_2019$C3P205_2<- car::recode(enares_2019$C3P205_2, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P205_2)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han pateado, mordido o te han dado puñetazos?
+str(enares_2019$C3P205_3)
+table(enares_2019$C3P205_3)
+enares_2019$C3P205_3<- car::recode(enares_2019$C3P205_3, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P205_3)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han golpeado o han tratado de golpearte con objetos como: correa, soga, palo, madera u otros?
+
+str(enares_2019$C3P205_4)
+table(enares_2019$C3P205_4)
+enares_2019$C3P205_4<- car::recode(enares_2019$C3P205_4, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P205_4)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han quemado en alguna parte de tu cuerpo?
+str(enares_2019$C3P205_5)
+table(enares_2019$C3P205_5)
+enares_2019$C3P205_5<- car::recode(enares_2019$C3P205_5, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P205_5)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han atacado o han tratado de atacarte con cuchillo, armas u otros?
+str(enares_2019$C3P205_6)
+table(enares_2019$C3P205_6)
+enares_2019$C3P205_6<- car::recode(enares_2019$C3P205_6, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P205_6)
+```
+
+```{r}
+enares_2019$V_Física_Fam=enares_2019$C3P121+enares_2019$C3P205_1+enares_2019$C3P205_2+enares_2019$C3P205_3+enares_2019$C3P205_4+enares_2019$C3P205_5+enares_2019$C3P205_6
+summary(enares_2019$V_Física_Fam)
+```
+
+```{r}
+enares_2019$V_Física_Fam=((enares_2019$V_Física_Fam-0)/7)*100
+summary(enares_2019$V_Física_Fam)
+```
+
+
+#### **Creación del índice de la variable de violencia psicológica en el entorno familiar**
+
+```{r include=FALSE}
+#### Variable: ¿Te insultan o te han insultado o te han dicho lisuras que te hacen sentir mal?
+str(enares_2019$C3P201_1)
+table(enares_2019$C3P201_1)
+enares_2019$C3P201_1<- car::recode(enares_2019$C3P201_1, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_1)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te ponen o te han puesto apodos que te hacen sentir mal?
+str(enares_2019$C3P201_2)
+table(enares_2019$C3P201_2)
+enares_2019$C3P201_2<- car::recode(enares_2019$C3P201_2, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_2)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dicen o te han dicho que todo lo que haces o dices está mal?
+str(enares_2019$C3P201_3)
+table(enares_2019$C3P201_3)
+enares_2019$C3P201_3<- car::recode(enares_2019$C3P201_3, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_3)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Se burlan o se han burlado de ti?
+str(enares_2019$C3P201_4)
+table(enares_2019$C3P201_4)
+enares_2019$C3P201_4<- car::recode(enares_2019$C3P201_4, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_4)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dicen o te han dicho cosas que te han hecho sentir avergonzada/o o humillada/o?
+str(enares_2019$C3P201_5)
+table(enares_2019$C3P201_5)
+enares_2019$C3P201_5<- car::recode(enares_2019$C3P201_5, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_5)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te amenazan o te han amenazado con golpearte o abandonarte?
+str(enares_2019$C3P201_6)
+table(enares_2019$C3P201_6)
+enares_2019$C3P201_6<- car::recode(enares_2019$C3P201_6, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_6)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te amenazan o te han amenazado con matarte?
+str(enares_2019$C3P201_7)
+table(enares_2019$C3P201_7)
+enares_2019$C3P201_7<- car::recode(enares_2019$C3P201_7, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_7)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han encerrado en algún lugar?
+str(enares_2019$C3P201_8)
+table(enares_2019$C3P201_8)
+enares_2019$C3P201_8<- car::recode(enares_2019$C3P201_8, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_8)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han botado o te han amenazado con botarte de tu casa (albergue)?
+str(enares_2019$C3P201_9)
+table(enares_2019$C3P201_9)
+enares_2019$C3P201_9<- car::recode(enares_2019$C3P201_9, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_9)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Las personas con quienes vives, te prohíben jugar con tus amigas/os, primas/os u otras/os niñas/os de tu edad?
+str(enares_2019$C3P201_10)
+table(enares_2019$C3P201_10)
+enares_2019$C3P201_10<- car::recode(enares_2019$C3P201_10, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P201_10)
+```
+
+
+```{r}
+enares_2019$V_Psicológica_Fam=enares_2019$C3P201_1+enares_2019$C3P201_2+enares_2019$C3P201_3+enares_2019$C3P201_4+enares_2019$C3P201_5+enares_2019$C3P201_6+enares_2019$C3P201_7+enares_2019$C3P201_8+enares_2019$C3P201_9+enares_2019$C3P201_10
+summary(enares_2019$V_Psicológica_Fam)
+```
+
+```{r}
+enares_2019$V_Psicológica_Fam=((enares_2019$V_Psicológica_Fam-0)/9)*100
+summary(enares_2019$V_Psicológica_Fam)
+```
+
+#### **Creación del índice de la variable de violencia física en el entorno escolar**
+```{r include=FALSE}
+#### Variable: ¿Te jalan o te han jalado el cabello u orejas?
+str(enares_2019$C3P227_1)
+table(enares_2019$C3P227_1)
+enares_2019$C3P227_1<- car::recode(enares_2019$C3P227_1, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_1)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dan o te han dado cachetadas, cocachos, pellizcos o nalgadas?
+str(enares_2019$C3P227_2)
+table(enares_2019$C3P227_2)
+enares_2019$C3P227_2<- car::recode(enares_2019$C3P227_2, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_2)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dan o te han dado patadas, puñetazos, codazos o rodillazos?
+str(enares_2019$C3P227_3)
+table(enares_2019$C3P227_3)
+enares_2019$C3P227_3<- car::recode(enares_2019$C3P227_3, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_3)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te golpean o te han golpeado con correas, sogas, palos, leñas, maderas, bastones, piedras u otros objetos?
+str(enares_2019$C3P227_4)
+table(enares_2019$C3P227_4)
+enares_2019$C3P227_4<- car::recode(enares_2019$C3P227_4, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_4)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han ahorcado o han intentado asfixiarte?
+str(enares_2019$C3P227_5)
+table(enares_2019$C3P227_5)
+enares_2019$C3P227_5<- car::recode(enares_2019$C3P227_5, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_5)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han hecho o te hacen daño con el lápiz, lapicero o regla?
+str(enares_2019$C3P227_6)
+table(enares_2019$C3P227_6)
+enares_2019$C3P227_6<- car::recode(enares_2019$C3P227_6, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_6)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han hecho o te hacen daño con fuego en alguna parte de tu cuerpo?
+str(enares_2019$C3P227_7)
+table(enares_2019$C3P227_7)
+enares_2019$C3P227_7<- car::recode(enares_2019$C3P227_7, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_7)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han atacado con cuchillo, navaja, verduguillo u otros objetos punzocortantes?
+str(enares_2019$C3P227_8)
+table(enares_2019$C3P227_8)
+enares_2019$C3P227_8<- car::recode(enares_2019$C3P227_8, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_8)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han atacado con una pistola?
+str(enares_2019$C3P227_9)
+table(enares_2019$C3P227_9)
+enares_2019$C3P227_9<- car::recode(enares_2019$C3P227_9, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P227_9)
+```
+
+```{r}
+enares_2019$V_Física_Esc=enares_2019$C3P227_1+enares_2019$C3P227_2+enares_2019$C3P227_3+enares_2019$C3P227_4+enares_2019$C3P227_5+enares_2019$C3P227_6+enares_2019$C3P227_7+enares_2019$C3P227_8+enares_2019$C3P227_9
+summary(enares_2019$V_Física_Esc)
+```
+
+```{r}
+enares_2019$V_Física_Esc=((enares_2019$V_Física_Esc-0)/7)*100
+summary(enares_2019$V_Física_Esc)
+```
+
+
+#### **Creación del índice de la variable de violencia psicológica en el entorno escolar**
+```{r include=FALSE}
+#### Variable: ¿Te tratan o te han tratado con insultos, burlas o desprecio?
+str(enares_2019$C3P223_1)
+table(enares_2019$C3P223_1)
+enares_2019$C3P223_1<- car::recode(enares_2019$C3P223_1, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_1)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te ponen o te han puesto apodos o chapas que te hacen sentir mal?
+str(enares_2019$C3P223_2)
+table(enares_2019$C3P223_2)
+enares_2019$C3P223_2<- car::recode(enares_2019$C3P223_2, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_2)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dicen o te han dicho que tus amigas/os,hermanas/os u otras/os niñas/os son mejores que tú?
+str(enares_2019$C3P223_3)
+table(enares_2019$C3P223_3)
+enares_2019$C3P223_3<- car::recode(enares_2019$C3P223_3, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_3)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dicen o te han dicho que todo lo que tú haces o dices está mal?
+str(enares_2019$C3P223_4)
+table(enares_2019$C3P223_4)
+enares_2019$C3P223_4<- car::recode(enares_2019$C3P223_4, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_4)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te dejan o te han dejado de hablar, te rechazan o no te dejan jugar con ellos o ser parte de su grupo haciéndote sentir mal?
+
+str(enares_2019$C3P223_5)
+table(enares_2019$C3P223_5)
+enares_2019$C3P223_5<- car::recode(enares_2019$C3P223_5, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_5)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Han roto o han tratado de romper tus cosas?
+str(enares_2019$C3P223_6)
+table(enares_2019$C3P223_6)
+enares_2019$C3P223_6<- car::recode(enares_2019$C3P223_6, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_6)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te han escondido o te esconden tus cosas haciéndote sentir mal?
+str(enares_2019$C3P223_7)
+table(enares_2019$C3P223_7)
+enares_2019$C3P223_7<- car::recode(enares_2019$C3P223_7, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_7)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Hablan o han hablado chismes sobre ti que te han hecho sentir mal?
+str(enares_2019$C3P223_8)
+table(enares_2019$C3P223_8)
+enares_2019$C3P223_8<- car::recode(enares_2019$C3P223_8, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_8)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Han colgado en internet o Facebook fotos o videos tuyos que te avergüenzan?
+str(enares_2019$C3P223_9)
+table(enares_2019$C3P223_9)
+enares_2019$C3P223_9<- car::recode(enares_2019$C3P223_9, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_9)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Has recibido mensajes de texto ofensivos en forma virtual o escritos?
+str(enares_2019$C3P223_10)
+table(enares_2019$C3P223_10)
+enares_2019$C3P223_10<- car::recode(enares_2019$C3P223_10, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_10)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te encierran o te han encerrado en algún lugar (baño, salones de clase, entre otros)
+str(enares_2019$C3P223_11)
+table(enares_2019$C3P223_11)
+enares_2019$C3P223_11<- car::recode(enares_2019$C3P223_11, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_11)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te amenazan o te han amenazado con pegarte o hacerte algún daño físico?
+str(enares_2019$C3P223_12)
+table(enares_2019$C3P223_12)
+enares_2019$C3P223_12<- car::recode(enares_2019$C3P223_12, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_12)
+```
+
+```{r include=FALSE}
+#### Variable: ¿Te amenazan o te han amenazado con matarte?
+str(enares_2019$C3P223_13)
+table(enares_2019$C3P223_13)
+enares_2019$C3P223_13<- car::recode(enares_2019$C3P223_13, "1='1'; 2='0'") ### Donde 1: Sí | 0: No
+table(enares_2019$C3P223_13)
+```
+
+```{r}
+enares_2019$V_Psicológica_Esc=enares_2019$C3P223_1+enares_2019$C3P223_2+enares_2019$C3P223_3+enares_2019$C3P223_4+enares_2019$C3P223_5+enares_2019$C3P223_6+enares_2019$C3P223_7+enares_2019$C3P223_8+enares_2019$C3P223_9+enares_2019$C3P223_10+enares_2019$C3P223_11+enares_2019$C3P223_12+enares_2019$C3P223_13
+summary(enares_2019$V_Psicológica_Esc)
+```
+
+```{r}
+enares_2019$V_Psicológica_Esc=((enares_2019$V_Psicológica_Esc-0)/12)*100
+summary(enares_2019$V_Psicológica_Esc)
+```
+
+
+> **Análisis descriptivo**
+
+```{r include=FALSE}
+attach(enares_2019)
+```
+
+**Histograma de edad de los niños y niñas encuestados para ENARES 2019**
+```{r echo=FALSE}
+hist(EDAD)
+```
+```{r}
+summary(EDAD)
+```
+
+
+* En primer lugar, lo evidente que resalta del gráfico es que el rango de edad de las personas encuestadas se centra en 9 a 11 años. Según el gráfico, la mayoría de infantes encuestados tienen 11 años de edad. Mientras que, menos de 500 encuestados cuentan con 9 años de edad. Asimismo, la distribución de datos tiende hacia la izquierda, lo cual indica que la mayor cantidad de encuestados se concentran en las edades de 10 a 11 años. Cabe destacar que, en promedio la edad de los niños y niñas encuestados es de 10.45 años.
+
+
+**Gráfico de pie sobre la distribución de datos según el sexo de los encuestados en ENARES 2019**
+```{r echo=FALSE}
+TABLA1=table(SEXO)
+color<-brewer.pal(length(TABLA1), "Set2")
+pie(TABLA1, col=color, density=50, angle=45)
+```
+
+* De manera gráfico, se puede deducir que el número de niñas encuestadas es superior al número de niños encuestados.
+
+
+```{r}
+hist(TOTAL_M, xlab="Total de mujeres en un aula", ylab="Número de aulas", main="Histograma de la distribución de mujeres por aula")
+```
+
+```{r}
+summary(TOTAL_M)
+```
+
+* En primer lugar, el rango de valores que representan a las mujeres que estudian en un aula deriva desde 0 a 30. Asimismo, se observa que la distribución de datos tiende hacia la derecha, lo cual indica que hay mayor cantidad de puntuaciones bajas. Es decir, el número de mujeres que estudian en un aula de una institución educativa es relativamente bajo. Asimismo, se observa que en promedio 8.322 mujeres estudian en un aula. 
+
+
+```{r}
+hist(TOTAL_V, xlab="Total de varones en un aula", ylab="Número de aulas", main="Histograma de la distribución de varones por aula")
+```
+
+```{r}
+summary(TOTAL_V)
+```
+
+* En primer lugar, el rango de valores que representan a los varones que estudian en un aula deriva desde 0 a 20. Asimismo, se observa que la distribución de datos tiende hacia la derecha, lo cual indica que hay mayor cantidad de puntuaciones bajas. Es decir, el número de varones que estudian en un aula de una institución educativa es relativamente bajo. Asimismo, se observa que en promedio 8.159 varones estudian en un aula. 
+
+* Si bien, en promedio, hay casi el mismo número de varones y mujeres que estudian en un aula de una institución educativa, el rango de valores que se observan en los gráficos indican que la distribución de mujeres tiene una mayor amplitud, en comparación a la distribución de los varones.
+
+**Gráfico de pie sobre la distribución de datos según el tipo de vivienda en el que residen los encuestados**
+```{r}
+str(Vivienda)
+TABLA2=table(Vivienda)
+color<-brewer.pal(length(TABLA2), "Set2")
+pie(TABLA2, col=color, density=50, angle=45)
+```
+
+```{r}
+table(Vivienda)
+```
+
+* Según lo observado, la tajada del pastel evidentemente más grande corresponde a la categoría "casa", lo cual indica que la gran mayoría de niños y niñas encuestados residen en una casa. Mientras que una ínfima minoría reside en un albergue.
+
+**Gráfico de barras de la distribución de institución educativas adscritas al DRE**
+```{r echo=FALSE}
+TABLA3=table(DIREED)
+barplot(TABLA3, xlab = "Dirección Regional de Educación [DRE]", ylab="Instituciones educativas adscritas al DRE")
+```
+
+```{r}
+TABLA3
+```
+
+* Tal como se observa en el gráfico, la DRE de Lima cuenta con el mayor número de instituciones educativas adscritas, el cual 1050; mientras que la DRE de Pasco cuenta con el menor número que es 14.
+
+**Gráfico de barras de la distribución de institución educativas según su tipo**
+```{r echo=FALSE}
+TABLA4=table(INED)
+TABLA4
+barplot(TABLA4, xlab="Tipo de Institución Educativa", ylab="Número de instituciones educativas")
+```
+```{r}
+table(INED)
+```
+
+* Tal como se puede apreciar en el gráfico, las institución educativas mixtas, es decir, donde estudian de manera conjunta niños y niñas es ampliamente superior en número a las instituciones educativa solo para mujeres. Asimismo, se evidencia que la encuesta realizada se centra en instituciones educativas donde los infantes pueden mayoritariamente compartir de manera libre con sus pares de distinto género. En tal sentido, al estudiar los factores que permiten explicar la variabilidad de los índices de violencia tanto psicológica como física será interesante analizar la variable sexo y tipo de institución educativa respecto a la variable dependiente.
+
+
+```{r echo=FALSE}
+hist(V_Física_Esc, xlab="Índice de violencia física en la escuela ", ylab="Número de casos", main="Histograma del índice de violencia física en la escuela")
+```
+```{r}
+summary(V_Física_Esc)
+```
+
+* Según el gráfico, el rango de valores del índice de violencia física en la escuela va desde 0 a 100. Asimismo, se observa que la distribución de datos tiende hacia la derecha, lo cual evidencia que la concentración de valores radica en los números relativamente bajos. Cabe destacar que, el puntaje medio del índice de violencia física en la escuela es 6.467 puntos, el cual es un puntaje bastante bajo. Ello nos permite indicar de manera preliminar que, en la escuela los niveles de violencia física entre pares es bastante bajo y no sería de gran preocupación y riesgo. Por ende, la escuela sería un lugar relativamente seguro de violencia física para los infantes.
+
+```{r echo=FALSE}
+hist(V_Psicológica_Esc, xlab="Índice de violencia psicológica en la escuela", ylab="Número de casos", main="Histograma del índice de violencia psicológica en la escuela")
+```
+```{r}
+summary(V_Psicológica_Esc)
+```
+
+* Según el histograma, se observa que el rango de valores del índice de violencia psicológica en la escuela va de 0 a 100. Igualmente, se aprecia que la distribución de valores tiende hacia la derecha, lo cual indica que la concentración de datos se enfoca en los valores más bajos. Cabe destacar que, el puntaje medio del índice de violencia psicológica en la escuela es de 15.747 puntos, el cual es un puntuaje relativamente bajo. Ello nos permite afirmar, de manera preliminar que, la escuela se proyectaría como un espacio seguro y medianamente libre de violencia psicológica para los infantes de 9 a 11 años.
+
+```{r echo=FALSE}
+hist(V_Física_Fam, xlab="Índice de violencia física en el hogar", ylab="Número de casos", main="Histograma del índice de violencia física en el hogar")
+```
+```{r}
+summary(V_Física_Fam)
+```
+
+* Tal como se observa en el histograma, el rango de valores del índice de violencia física en el entorno familiar oscila del 0 al 100. Adicionalmente, se aprecia que la distribución de datos tiende hacia la derecha, lo cual indica que los valores se concentran en los datos relativamente más bajos. Cabe destacar que, en promedio el puntaje medio del índice de violencia física en el hogar es de 13.28 puntos. Dicho puntaje es relativamente bajo, lo cual permite afirmar de manera preliminar que el entorno familiar es relativamente seguro y libre de violencia física para los infantes.
+
+
+```{r echo=FALSE}
+hist(V_Psicológica_Fam, xlab="Índice de violencia psicológica en el hogar", ylab="Número de casos", main="Histograma del índice de violencia psicológica en el hogar")
+```
+```{r}
+summary(V_Psicológica_Fam)
+```
+* Según lo observado en el histograma, el rango de valores del índice de violencia psicológica oscila entre 0 al 100. Asimismo, se aprecia que la distribución de datos tiende hacia la derecha, lo cual indica que los valores se concentran en los puntajes más bajos. Cabe señalar que, el puntaje medio del índice de violencia psicológica en el entorno familiar es de 13.26 puntos. Dicho puntaje es relativamente bajo, lo cual permite mencionar de manera preliminar que el hogar de los niños y niñas de 9 a 11 años es un espacio medianamente seguro y libre de violencia psicológico para los infantes.
+
+
+```{r echo=FALSE}
+boxplot(V_Física_Esc, V_Física_Fam, names=c("Escuela", "Hogar"), ylab="Puntaje del índice", main="Boxplot del índice de violencia física en el hogar y en la escuela")
+```
+* Tal como se observa en el boxplot, en ambas cajas de datos existen valores atípicos, pero la caja de datos del índice de violencia física en la escuela presenta mayor cantidad de outliers, lo cual indica que existe una gran dispersión de datos para este caso. Asimismo, se observa una evidente diferencia en el tamaño de las cajas, que permite deducir que existe menor amplitud en el rango de valores en el caso del índice de violencia física en la escuela, en comparación con la caja del índice de violencia física del hogar. Cabe destacar que, el valor máximo del índice de violencia de la escuela es aproximadamente 30; mientras que, el valor máximo del índice del entorno familiar es de aproximadamente 60. Ello sumado a la concentración de datos en la parte superior de la gráfica del índice de hogar brinda indicios que permiten deducir que el índice de violencia física es mayor en el hogar que en la escuela. Así, la mediana del índice de violencia física en la escuela es 0; mientras que más de la mitad de los niños y niñas de 9 a 11 años encuestados tuvieron un puntaje aproximado de 14.29 puntos en la escuela. En tal sentido, de manera preliminar, se puede afirmar que los niveles de violencia física son superiores en el hogar que en la escuela, lo cual permite indicar que la escuela es un lugar relativamente más seguro y libre de violencia física para los infantes respecto al hogar.
+
+
+```{r echo=FALSE}
+boxplot(V_Psicológica_Esc, V_Psicológica_Fam, names=c("Escuela", "Hogar"), ylab="Puntaje del índice", main="Boxplot del índice de violencia psicológica en el hogar y en la escuela")
+```
+
+* Tal como se observa en el boxplot, en ambas cajas de datos hay presencia de valores atípicos, lo cual permite indicar que existe una gran dispersión de datos en ambos casos. Asimismo, se observa que no existe una gran diferencia en el tamaño de las cajas; más bien, se aprecia que ambas cajas son similares, aunque se debe mencionar que la caja del índice de violencia psicológica de la escuela es ligeramente más grande que el del hogar, lo cual permite deducir que existe una mayor amplitud en el rango de datos en el caso del índice de violencia psicológica de la escuela. Cabe destacar que, el valor máximo del índice de violencia psicológica de la escuela es aproximadamente 60; mientras que, el valor máximo del índice del entorno familiar es de aproximadamente 40. Así, la mediana del índice de violencia psicológica en la escuela es 8.333; mientras que más de la mitad de los niños y niñas de 9 a 11 años encuestados tuvieron un puntaje aproximado de 11.11 puntos en el hogar. En tal sentido, de manera preliminar, se puede afirmar que los niveles de violencia psicológica tanto en la escuela como en el hogar son similares; además, son relativamente bajos, lo cual permite indicar, de manera preliminar que, tanto la escuela como el hogar son espacios relativamente seguros y libres de violencia psicológica para los infantes.
+
+```{r echo=FALSE}
+library(psych)
+describeBy(V_Física_Fam, SEXO)
+```
+
+* En el caso de las niñas de 9 a 11 años encuestadas, el puntaje medio que se les asignó en cuanto al índice de violencia físcia en el entorno familiar es de 12.45 puntos. Mientras que el puntaje medio del mismo índice para los niños de 9 a 11 años es de 14.19 puntos. A partir de ello, se puede deducir de manera preliminar que, los niños de 9 a 11 años son más propensos a recibir algún tipo de acción referente a la violencia física en el hogar en comparación de sus pares femeninos.
+
+
+```{r echo=FALSE}
+describeBy(V_Física_Esc, SEXO)
+```
+
+* El puntaje medio de las niñas encuestadas de 9 a 11 años respecto al índice de violencia física en la escuela es de 5.66 puntos. Mientras que el puntaje medio del mismo índice en el caso de los niños de 9 a 11 años es de 7.34 puntos. En tal sentido, se puede mencionar, de manera preliminar que, los niños de 9 a 11 años son más propensos a recibir algún tipo de castigo físico en la escuela en comparación a sus pares femeninos.
+
+
+```{r echo=FALSE}
+describeBy(V_Psicológica_Fam, SEXO)
+```
+
+* El puntaje medio de las niñas de 9 a 11 años encuestadas respecto al índice de violencia psicológica en el hogar es de 13.39 puntos. Mientras que el puntaje medio del mismo índice de los niños de 9 a 11 años es de 13.12 puntos. A raíz de ello, se puede deducir preliminarmente que, las niñas de 9 a 11 años recibirían en promedio mayor cantidad de acciones relacionadas a la violencia psicológica en el hogar en comparación a sus pares masculinos.
+
+
+```{r echo=FALSE}
+describeBy(V_Psicológica_Esc, SEXO)
+```
+
+* El puntaje medio de las niñas de 9 a 11 años respecto al índice de violencia psicológica en la escuela es de 16.86 puntos. Mientras que el puntaje medio del mismo índice de los niños de 9 a 11 años es de 14.54 puntos. En tal sentido, se puede afirmar preliminarmente que, las niñas de 9 a 11 años recibirían en promedio mayor cantidad de acciones relacionadas a la violencia psicológica en la escuela en comparación a sus pares masculinos.
+
+
+```{r echo=FALSE}
+describeBy(V_Física_Esc, EDAD)
+```
+
+* El puntaje medio de los niños y niñas de 9 años de edad respecto al índice de violencia física en el entorono familiar es de 7.83 puntos. Mientras que los infantes de 10 años de edad tienen un puntaje medio de 7.22 puntos. Asimismo, los niños y niñas de 11 años de edad poseen un puntaje medio del índice de violencia física en el hogar de 5.77 puntos. En tal sentido, se aprecia que hay una tendencia a la baja, ya que a mayor edad, el puntaje medio del índice de violencia física en el hogar disminuye. Así, los niños y niñas de 11 años de edad serían los que aparentemente sufrirían menos violencia física en el hogar.
+
+
+```{r echo=FALSE}
+describeBy(V_Psicológica_Esc, EDAD)
+```
+
+* El puntaje medio de los niños y niñas de 9 años de edad respecto al índice de violencia física en la escuela es de 18.1 puntos. Mientras que los infantes de 10 años de edad tienen un puntaje medio de 16.36 puntos. Asimismo, los niños y niñas de 11 años de edad poseen un puntaje medio del índice de violencia física en la escuela de 14.9 puntos. En tal sentido, se aprecia que hay una tendencia a la baja, ya que a mayor edad, el puntaje medio del índice de violencia física en la escuela disminuye. Así, los niños y niñas de 9 años de edad serían los que aparentemente sufrirían más violencia física en la escuela.
+
+
+```{r echo=FALSE}
+describeBy(V_Física_Fam, EDAD)
+```
+
+* El puntaje medio de los niños y niñas de 9 años de edad respecto al índice de violencia psicológica en el hogar es de 14.49 puntos. Mientras que los infantes de 10 años de edad tienen un puntaje medio de 14.14 puntos. Asimismo, los niños y niñas de 11 años de edad poseen un puntaje medio del índice de violencia psicológica en el hogar de 12.57 puntos. En tal sentido, se aprecia que hay una tendencia a la baja, ya que a mayor edad, el puntaje medio del índice de violencia psicológica en el hogar disminuye. Así, los infantes de 9 años de edad serían los que aparentemente sufrirían más violencia psicológica en el hogar.
+
+```{r echo=FALSE}
+describeBy(V_Psicológica_Fam, EDAD)
+```
+
+* El puntaje medio de los niños y niñas de 9 años de edad respecto al índice de violencia psicológica en el entorno familiar es de 12.99 puntos. Mientras que los infantes de 10 años de edad tienen un puntaje medio de 15.2 puntos. Asimismo, los niños y niñas de 11 años de edad poseen un puntaje medio del índice de violencia psicológica en la escuela es de 12.27 puntos. En tal sentido, se aprecia que los infantes de 10 años son los que aparentemente sufrirían de mayor violencia psicológica en la escuela en comparación de sus pares de 9 y 11 años.
+
+
+**Variables relacionadas a Constitución Familiar**
+
+* La ausencia de uno de los padres es un factor de riesgo. Provenir de un hogar que en la primera visita era monoparental se asocia con un incremento en la probabilidad de convertirse en víctima de violencia física o psicológica (Sánchez e Hidalgo, 2019).
+
+```{r}
+#### variable: Vive con su padre
+str(enares_2019$C3P115_2)
+table(enares_2019$C3P115_2)
+enares_2019$C3P115_2 <- car::recode(enares_2019$C3P115_2, "1='Sí'; 0='No'")
+table(enares_2019$C3P115_2)
+```
+
+```{r}
+#### variable: Vive con su madre
+str(enares_2019$C3P115_1)
+table(enares_2019$C3P115_1)
+enares_2019$C3P115_1 <- car::recode(enares_2019$C3P115_1, "1='Sí'; 0='No'")
+table(enares_2019$C3P115_1)
+```
+
+
+```{r}
+#### Filtro basado en que el infante vive SOLO con su padre, pero no con su madre
+filter(enares_2019, C3P115_2=="Sí", C3P115_1=="No")
+```
+
+```{r}
+#### Filtro basada en que el infante vive SOLO con su madre
+filter(enares_2019, C3P115_2=="No", C3P115_1=="Sí")
+```
+
+```{r}
+#### Filtro basado en que el infante vive con ambos padres
+filter(enares_2019, C3P115_2=="Sí", C3P115_1=="Sí")
+```
+
+
+> **Posibles pruebas estadísticas a utilizar para responder a la pregunta de investigación planteada**
+
+#### **Modelo de regresión Poisson**
+
+* Se seleccionó al modelo de regresión de Poisson debido a que las variables dependientes de los siguientes 4 modelos son del tipo numérico discreta, mientras que sus variables explicativas son tanto categóricas como numéricas.
+
+###### Modelo 1
+
+- **Variable dependiente**: índice de violencia física en el hogar (Variable númerica discreta)
+```{r}
+class(V_Física_Fam)
+```
+
+- **Posibles Variables independientes**:
+
+    - Constitución familiar (Vive solo con el padre, vive solo con la madre, vive con ambos padres): C3P115_2 y C3P115_1
+    - Lugar de residencia: DIREED
+    - EDAD: EDAD
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - SEXO: SEXO
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    - Tipo de vivienda: VIVIENDA
+
+###### Modelo 2
+
+- **Variable dependiente**: índice de violencia psicológica en el hogar (Variable númerica discreta)
+```{r}
+class(V_Psicológica_Fam)
+```
+
+- **Posibles Variables independientes**:
+
+    - Constitución familiar (Vive solo con el padre, vive solo con la madre, vive con ambos padres): C3P115_2 y C3P115_1
+    - Lugar de residencia: DIREED
+    - EDAD: EDAD
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - SEXO: SEXO
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    - Rendimient Académico ("Por tener buenas notas", "Por tener malas notas"): Buenas_Notas y Malas_Notas
+    - Tipo de vivienda: VIVIENDA
+    
+###### Modelo 3
+
+- **Variable dependiente**: índice de violencia física en la escuela (Variable númerica discreta)
+```{r}
+class(V_Física_Esc)
+```
+
+- **Posibles Variables independientes**:
+
+    - Lugar de residencia: DIREED
+    - SEXO: SEXO
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    - Rendimient Académico ("Por tener buenas notas", "Por tener malas notas"): Buenas_Notas y Malas_Notas
+    - Tipo de institución educativa: INED
+    
+###### Modelo 4
+
+- **Variable dependiente**: índice de violencia psicológica en la escuela (Variable númerica discreta)
+```{r}
+class(V_Psicológica_Esc)
+```
+
+
+- **Posibles Variables independientes**:
+
+    - Lugar de residencia: DIREED
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - SEXO: SEXO
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    - Rendimient Académico ("Por tener buenas notas", "Por tener malas notas"): Buenas_Notas y Malas_Notas
+    - Tipo de institución educativa: INED
+
+
+#### **Modelo de regresión logística ordinal**
+
+- Se seleccionó el modelo de regresión logística ordinal debido a que la variable dependiente de los siguientes cuatro modelos es del tipo categórica ordinal, mientras que sus variables explicativas son tanto categóricas como numéricas
+
+###### Modelo 1
+- **Variable dependiente**: Frecuencia en que ocurren agresiones físicas en el hogar (Variable categórica ordinal): C3P208
+```{r}
+class(enares_2019$C3P208)
+```
+
+- **Posibles Variables independientes**:
+
+    - Constitución familiar (Vive solo con el padre, vive solo con la madre, vive con ambos padres): C3P115_2 y C3P115_1
+    - Lugar de residencia: DIREED
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - Tipo de Vivienda: VIVIENDA
+    - EDAD: EDAD
+    - SEXO: SEXO
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    
+###### Modelo 2
+- **Variable dependiente**: Frecuencia en que ocurren agresiones psicológicas en el hogar (Variable categórica ordinal): C3P204
+```{r}
+class(enares_2019$C3P204)
+```
+
+- **Posibles Variables independientes**:
+
+    - Constitución familiar (Vive solo con el padre, vive solo con la madre, vive con ambos padres): C3P115_2 y C3P115_1
+    - Lugar de residencia: DIREED
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - EDAD: EDAD
+    - SEXO: SEXO
+    - Tipo de vivienda: VIVIENDA
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    - Rendimient Académico ("Por tener buenas notas", "Por tener malas notas"): Buenas_Notas y Malas_Notas
+    
+###### Modelo 3
+- **Variable dependiente**: Frecuencia en que ocurren agresiones física en la escuela (Variable categórica ordinal): C3P230
+```{r}
+class(enares_2019$C3P230)
+```
+
+- **Posibles Variables independientes**:
+
+    - Lugar de residencia: DIREED
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - SEXO: SEXO
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    - Rendimient Académico ("Por tener buenas notas", "Por tener malas notas"): Buenas_Notas y Malas_Notas
+    - Tipo de colegio: INED
+    
+###### Modelo 4
+- **Variable dependiente**: Frecuencia en que ocurren agresiones psicológicas en la escuela (Variable categórica ordinal): C3P226
+```{r}
+class(enares_2019$C3P226)
+```
+
+- **Posibles Variables independientes**:
+
+    - Lugar de residencia: DIREED
+    - Total de varones: TOTAL_V
+    - Total de mujeres: TOTAL_M
+    - SEXO: SEXO
+    - Condición socioeconómica ("Por tener plata", "por no tener plata"): Tiene_Plata y No_Tiene_Plata
+    - Rendimient Académico ("Por tener buenas notas", "Por tener malas notas"): Buenas_Notas y Malas_Notas
+    - Tipo de colegio: INED
+
+
+> **Link de github**
+
+```{r}
+
+```
+
+> **Bibliografía**
+
+Benavides, M. y León, J. (2013). Una mirada a la violencia física contra los niños y niñas en los hogares peruanos: magnitudes, factores asociados y transmisión de la violencia de madres a hijos e hijas. (Documento de Trabajo, 71). GRADE Group for the Analysis of Development. https://nbn-resolving.org/urn:nbn:de:0168-ssoar-51563-4 
+Defensoría del Pueblo (s.f.). Niñez y adolescencia. https://www.defensoria.gob.pe/grupos_de_proteccion/ninez-adolescencia-y-adultos-mayores/ 
+D.S. N°004-2018-MINEDU. Que aprueba los Lineamientos para la Gestión de la Convivencia Escolar, la Prevención y la Atención de la Violencia Contra Niñas, Niños y Adolescentes. Ministerio de Educación (2018). https://www.gob.pe/institucion/minedu/normas-legales/273491-004-2018 
+D.S. N° 009-2019-M. Que aprueba los lineamientos para incorporar el enfoque intercultural en la prevención, atención y protección frente a la violencia sexual contra niños, niñas, adolescentes y mujeres indígenas u originarias. Ministerio de Cultura (2019). https://www.gob.pe/institucion/cultura/normas-legales/289561-ds-n-009-2019-mc 
+D.S. N° 008-2021-MIMP. Mediante el cual se aprueba la Política Nacional Multisectorial para las Niñas, Niños y Adolescentes al 2030. Ministerio de la Mujer y Poblaciones Vulnerables. Diario Oficial el Peruano (2021). https://busquedas.elperuano.pe/normaslegales/decreto-supremo-que-aprueba-la-politica-nacional-multisector-decreto-supremo-no-008-2021-mimp-1966624-1/ 
+Fondo de las Naciones Unidas para la Infancia (2019). El gran problema es que la violencia en el país es cotidiana y, aún peor, está normalizada, es decir, es considerada una práctica válida para corregir, controlar o mostrar poder sobre los niños, niñas y adolescentes. https://www.unicef.org/peru/sites/unicef.org.peru/files/2019-09/cifras-violencia-ninas-ninos-adolescentes-peru-2019.pdf 
+García, M. (2018). Causas y prevención del bullying: programa de prevención [Tesis para obtener el título de Licenciado, Universitat de les Illes Balears]. http://hdl.handle.net/11201/152405 
+Gonzáles-Muriel, C. (1998). Factores de riesgo del maltrato y abandono infantil desde una perspectiva multicausal. Aula, 8, pp. 29-44. https://doi.org/10.14201/3417
+Instituto de Estadística e Informática (2020). Encuesta Nacional sobre Relaciones Sociales 2019.http://iinei.inei.gob.pe/microdatos/ 
+Ley Nº 26518. Para la creación del Sistema Nacional de Atención Integral al Niño y el Adolescente, de 24 de julio de 1995. 
+Ley Nº 27337. Por la cual se aprueba el Nuevo Código de los Niños y Adolescentes. 21 de julio de 2000. 
+Ley N° 30364. Por la cual se aprueba la Ley para prevenir, sancionar y erradicar la violencia contra las mujeres y los integrantes del grupo familiar. 6 de noviembre de 2015. D.O. N°1314999_1.
+Ley N°30403. Por la cual se prohíbe el uso del castigo físico y humillante contra los niños, niñas, y adolescentes en el hogar, la escuela, la comunidad, lugares de trabajo y otros relacionados. 29 de diciembre de 2015. D.O. N° 1328702_1. 
+Ministerio de la Mujer y Poblaciones Vulnerables (s.f). Plan Nacional de Acción por la Infancia y la Adolescencia.  https://www.mimp.gob.pe/webs/mimp/pnaia/index.php 
+Ministerio de la Mujer y Poblaciones Vulnerables (2020). Programa Nacional para la Prevención y Erradicación de la Violencia contra las Mujeres e Integrantes del Grupo Familiar . Aurora. Boletín estadístico.  
+Perú21 (28 de septiembre de 2021). Aumenta el número de casos de violencia contra niñas, niños y adolescentes a raíz de la pandemia. Perú 21. https://peru21.pe/lima/pandemia-violencia-maltrato-ninos-ninas-adolescentes-aumenta-el-numero-de-casos-de-violencia-contra-ninas-ninos-y-adolescentes-a-raiz-de-la-pandemia-noticia/ 
+Observatorio Nacional de la Violencia Contra las Mujeres y los Integrantes del grupo familiar (21 de agosto del 2018). Los niños, niñas y adolescentes: población vulnerable al maltrato y al abuso. https://observatorioviolencia.pe/ninez-vulnerable-al-maltrato/ 
+Olweus, D. (2014). Acoso escolar, “Bullying”, en las escuelas: hechos e intervenciones. University of Bergen. https://www.researchgate.net/publication/253157856_ACOSO_ESCOLARBULLYING_EN_LAS_ESCUELAS_HECHOS_E_INTERVENCIONES 
+Oré, B. y Diez Canseco, F. (2011). Narrativas acerca del cuidado y la violencia hacia niños y niñas en el hogar: estudio en cuatro comunidades del Perú. GRADE  Grupo de Análisis para el Desarrollo. 
+Sánchez, A. e Hidalgo, A. (2019). Medición de la prevalencia de la violencia física y psicológica hacia niñas, niños y adolescentes, y sus factores asociados en el Perú: Evidencia de Niños del Milenio. (Avances de Investigación 38). GRADE Grupo de Análisis para el Desarrollo. http://repositorio.grade.org.pe/handle/GRADE/504 
+
